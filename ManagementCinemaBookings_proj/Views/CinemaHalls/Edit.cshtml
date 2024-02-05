@@ -1,0 +1,68 @@
+﻿@model ManagementCinemaBookings.ViewModels.CinemaHallVM
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal col-xs-10 col-xs-pull-2 col-xs-offset-5">
+        <h2 class="editCinHall_title">PROMJENA KINO DVORANA</h2>
+        <br />
+        <br />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.CinemaCity, htmlAttributes: new { @class = "control-label col-xs-2" })
+            <div class="col-xs-10">
+                @Html.EditorFor(model => model.CinemaCity, new { htmlAttributes = new { @class = "form-control", @style = "border:2px solid #5C423E;border-radius:5px;color:#5C423E;" } })
+                @Html.ValidationMessageFor(model => model.CinemaCity, "", new { @style = "color:#ED371F;" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CinemaAddress, htmlAttributes: new { @class = "control-label col-xs-2" })
+            <div class="col-xs-10">
+                @Html.EditorFor(model => model.CinemaAddress, new { htmlAttributes = new { @class = "form-control", @style = "border:2px solid #5C423E;border-radius:5px;color:#5C423E;" } })
+                @Html.ValidationMessageFor(model => model.CinemaAddress, "", new { @style = "color:#ED371F;" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CinemaName, htmlAttributes: new { @class = "control-label col-xs-2" })
+            <div class="col-xs-10">
+                @Html.EditorFor(model => model.CinemaName, new { htmlAttributes = new { @class = "form-control", @style = "border:2px solid #5C423E;border-radius:5px;color:#5C423E;" } })
+                @Html.ValidationMessageFor(model => model.CinemaName, "", new { @style = "color:#ED371F;" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.HallName, htmlAttributes: new { @class = "control-label col-xs-2" })
+            <div class="col-xs-10">
+                @Html.EditorFor(model => model.HallName, new { htmlAttributes = new { @class = "form-control", @style = "border:2px solid #5C423E;border-radius:5px;color:#5C423E;" } })
+                @Html.ValidationMessageFor(model => model.HallName, "", new { @style = "color:#ED371F;" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.HallType, htmlAttributes: new { @class = "control-label col-xs-2" })
+            <div class="col-xs-10">
+                @Html.EditorFor(model => model.HallType, new { htmlAttributes = new { @class = "form-control", @style = "border:2px solid #5C423E;border-radius:5px;color:#5C423E;" } })
+                @Html.ValidationMessageFor(model => model.HallType, "", new { @style = "color:#ED371F;" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.SeatCapacity, htmlAttributes: new { @class = "control-label col-xs-2" })
+            <div class="col-xs-10">
+                @Html.EditorFor(model => model.SeatCapacity, new { htmlAttributes = new { @class = "form-control", @style = "border:2px solid #5C423E;border-radius:5px;color:#5C423E;" } })
+                @Html.ValidationMessageFor(model => model.SeatCapacity, "", new { @style = "color:#ED371F;" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-10 col-xs-push-3">
+                <input style="border:3px solid #FFF;" class="btn btn-lg btn-warning" type="submit" value="Promijeni" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

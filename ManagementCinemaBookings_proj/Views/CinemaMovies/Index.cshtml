@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ManagementCinemaBookings.ViewModels.CinemaMovieVM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <h2>LISTA KINO FILMOVA</h2>
+    <br />
+    <br />
+    @Html.ActionLink("Dodaj", "Create", "CinemaMovies", routeValues: new { controller = "CinemaMovies", action = "Create" }, htmlAttributes: new { @class = "btn btn-md btn-success" })
+</div>
+
+<table class="table table-bordered table-responsive">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieDirector)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieGenre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieIssuanceCountry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieIssuanceYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieRuntime)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieDirector)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieGenre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieIssuanceCountry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieIssuanceYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieRuntime)
+            </td>
+            <td>
+                @Html.ActionLink("Promijeni", "Edit", "CinemaMovies", routeValues: new { id = item.Id }, htmlAttributes: new { @class = "btn btn-md btn-warning" })
+                @Html.ActionLink("Ukloni", "Delete", "CinemaMovies", routeValues: new { id = item.Id }, htmlAttributes: new { @class = "btn btn-md btn-danger" })
+            </td>
+        </tr>
+    }
+</table>

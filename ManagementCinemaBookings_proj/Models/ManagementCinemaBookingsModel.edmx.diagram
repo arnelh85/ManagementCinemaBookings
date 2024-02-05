@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9908743889f5421db4cd51e9ef462c45" Name="Diagram1">
+        <EntityTypeShape EntityType="ManagementCinemaBookingsDBModel.CinemaEmployee" Width="1.875" PointX="4.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementCinemaBookingsDBModel.CinemaEmployeeType" Width="1.875" PointX="0.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementCinemaBookingsDBModel.CinemaHall" Width="1.75" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementCinemaBookingsDBModel.CinemaMovie" Width="1.75" PointX="0.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementCinemaBookingsDBModel.CinemaScreening" Width="1.75" PointX="3.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementCinemaBookingsDBModel.CinemaTicketBooking" Width="1.875" PointX="8.125" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="ManagementCinemaBookingsDBModel.FK_CinemaEmployees_CinemaTicketBookings" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementCinemaBookingsDBModel.FK_CinemaEmployeeTypes_CinemaEmployees" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementCinemaBookingsDBModel.FK_CinemaHalls_CinemaScreenings" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementCinemaBookingsDBModel.FK_CinemaMovies_CinemaScreenings" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementCinemaBookingsDBModel.FK_CinemaMovies_CinemaTicketBookings" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagementCinemaBookingsDBModel.FK_CinemaScreenings_CinemaTicketBookings" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
